@@ -1,72 +1,48 @@
+
+int outvec[] = {};
+int pinvec[] = {};
+int j = 100;
+
+
 void setup() 
 {
+  for(int j = 0; j < 7; j++)
+    int outvec[] = {j};
+  
 
-  for (int i = 6; i <= 13; i++) {
-      pinMode(i, OUTPUT);
+  for(int i = 7; i <= 13; i++){ 
+      pinMode(pinvec[i], OUTPUT);
+      }    
       Serial.begin(9600);
       while (!Serial);
-      Serial.println("Input 1 to 8  to turn on the leds or push the 9 and see tha magic delete, if you type 1--and the number what led you want to read--, you get that is ON or OFF");
-      
-    }
+      Serial.println("Input 1 to 7  to turn on the leds or push the 8 and see tha magic delete or push the 9 and look at the runing light.If you type 1--and the number what led you want to read--, you get that is ON or OFF");
 }
-
-
-int j = 100;
 void loop()
 
 {
-  if (Serial.available())
+  if (Serial.available()) 
   {
     int state = Serial.parseInt();
-    if (state == 1)
-    {
-     digitalWrite(13, HIGH);
-     Serial.println("Command completed LED turned ON");
-    }
-
-    if (state == 2)
-    {
-     digitalWrite(12, HIGH);
-     Serial.println("Command completed LED turned ON");
-    }
-
-    if (state == 3)
-    {
-     digitalWrite(11, HIGH);
-     Serial.println("Command completed LED turned ON");
-    }
-
- 
-    if (state == 4)
-    {
-     digitalWrite(10, HIGH);
-     Serial.println("Command completed LED turned ON");
-    }
-
     
-    if (state == 5)
+    
+    if (pinvec[state]== state +6)
     {
-     digitalWrite(9, HIGH);
+     digitalWrite(pinvec[state], HIGH);
      Serial.println("Command completed LED turned ON");
     }
 
-    
-    if (state == 6)
-    {
-     digitalWrite(8, HIGH);
-     Serial.println("Command completed LED turned ON");
-    }
-    
-    if (state == 7)
-    {
-     digitalWrite(7, HIGH);
-     Serial.println("Command completed LED turned ON");
-    }
 
     if (state == 8)
     {
-     digitalWrite(6, HIGH);
-     Serial.println("Command completed LED turned ON");
+
+      for (int i = 6; i <= 13; i++) {
+        if (j < 1){j = 1;}
+          digitalWrite(i, HIGH);
+            delay(j);
+              j -=4;
+                digitalWrite(i, LOW);
+                  delay(0);
+      } 
     }
     
     if (state == 9)
@@ -77,7 +53,7 @@ void loop()
       digitalWrite(i, HIGH);
         delay(j);
         j -=4;
-          digitalWrite(i, LOW);
+          digitalWrite(i, HIGH);
         delay(0);
       }
 
@@ -90,35 +66,15 @@ void loop()
      Serial.println("Command completed LED turned OFF");
     }
 
-    if (state == 11)
-      if (digitalRead(5) == LOW)
-    {   Serial.println("OFF");}
+
+    if (outvec[state-11]== state-11)
+    {
+     digitalRead(pinvec[state - 11] == LOW);
+     Serial.println("OFF");}
       else {Serial.println("ON");}
 
-    if (state == 12)
-      if (digitalRead(4) == LOW)
-    {   Serial.println("OFF");}
-      else {Serial.println("ON");}
-
-    if (state == 13)
-      if (digitalRead(3) == LOW)
-    {   Serial.println("OFF");}
-      else {Serial.println("ON");}
-
-    if (state == 14)
-      if (digitalRead(2) == LOW)
-    {   Serial.println("OFF");}
-      else {Serial.println("ON");}
-
-    if (state == 15)
-      if (digitalRead(1) == LOW)
-    {   Serial.println("OFF");}
-      else {Serial.println("ON");}
-
-    if (state == 16)
-      if (digitalRead(0) == LOW)
-    {   Serial.println("OFF");}
-      else {Serial.println("ON");}
 
   }
 }
+
+  
