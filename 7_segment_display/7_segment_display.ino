@@ -86,11 +86,11 @@ void turnOff()
 
 
 void loop() {
- blinkPoint(3);
+ turnOff();
  for(int i=1;i<11;i++) {
    displayDigit(i);
    delay(1000);
    turnOff();
  }
- turnOff();
+ blinkPoint(3);
 }
