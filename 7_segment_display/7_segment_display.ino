@@ -1,3 +1,16 @@
+/*
+  Inspiring from here: https://www.instructables.com/id/7-Segment-Display-On-Arduino/
+    t
+   ---
+l1|   |r1
+  | m |
+   ---
+l2|   |r2
+  |   |
+   ---
+    b
+ */
+
 int l2 = 2;  //For displaying segment "second left"
 int b = 3;  //For displaying segment "bottom"
 int l1 = 4;  //For displaying segment "first left"
