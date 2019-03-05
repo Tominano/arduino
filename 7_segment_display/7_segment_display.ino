@@ -62,6 +62,16 @@ void displayDigit(int digit)
  digitalWrite(r2,LOW);
  
 }
+
+void blinkPoint(int n) {
+  for(int i = 0;i<n;i++){
+    digitalWrite(p, LOW);
+    delay(200);
+    digitalWrite(p, HIGH);
+    delay(200);
+  }
+}
+
 void turnOff()
 {
   digitalWrite(l1,HIGH);
@@ -71,15 +81,16 @@ void turnOff()
   digitalWrite(b,HIGH);
   digitalWrite(r1,HIGH);
   digitalWrite(r2,HIGH);
+  digitalWrite(p,HIGH);
 }
 
 
 void loop() {
-  for(int i=0;i<10;i++) {
+ blinkPoint(3);
+ for(int i=1;i<11;i++) {
    displayDigit(i);
    delay(1000);
    turnOff();
  }
- 
-//   displayDigit(8);
+ turnOff();
 }
