@@ -1,5 +1,6 @@
-int ledPin=13;
+int ledPin=9;
 int sensorPin=7;
+
 boolean val = 0; // sensor HIGH or LOW
 boolean status_lights = false;
 
@@ -11,7 +12,7 @@ long detection_range = 0;
 void setup(){
   pinMode(ledPin, OUTPUT);
   pinMode(sensorPin, INPUT);
-  Serial.begin(9600);
+  //Serial.begin(9600);
 }
   
 void loop (){
@@ -24,8 +25,8 @@ void loop (){
     } else if (clap > 0 && millis()-detection_range >= 100){
       detection_range = millis();
       clap++;
-      Serial.print("counting clap: ");
-      Serial.println(clap);
+      //Serial.print("counting clap: ");
+      //Serial.println(clap);
     }
   }
   
