@@ -65,10 +65,13 @@ for (int j = 0; j <= 10000; j++) {
 // (note: line 1 is the second row, since counting begins with 0):
 lcd.setCursor(0, 1);
 // print the number of seconds since reset:
-if(distance <= sonarMin || soundsens>=threshold )
+if(distance <= sonarMin){
 a++;
+}
+if(soundsens>=threshold){
 b++;
-{lcd.print(a,b);}
+}
+lcd.print(a,b);
 }
 
 ///////////////////////////////////////////////
