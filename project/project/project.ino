@@ -13,7 +13,7 @@ int distance;
 ////////////////////////////////////////////////////////////////
 //   Póstaláda érzékelő
 const int sensorPin = A0; // select the input pin for LDR
-int sensorValue = 0; // variable to store the value coming from the sensor
+int sensorValue = 0; // variable to store the value coming from the sensor    //ez nem kell
 const int sensorMin=300;// Ezt állítom be, hogy mikor jelezzen a póstaládás motyó
 const int postPin = 8;
 
@@ -30,7 +30,10 @@ pinMode(ledPin, OUTPUT);
 void loop() {
 int soundsens=analogRead(soundpin); // reads analog data from sound sensor
   if (soundsens>=threshold) { // Against the dogbarking
-    tone(buzzer, 5500); 
+      for (int i = 0; i <= 10000; i++) {
+    tone(buzzer, i);
+    delay(10);
+      } 
     delay(1000);        // ...for 1 sec
     noTone(buzzer);     // Stop sound...
     delay(1000);
