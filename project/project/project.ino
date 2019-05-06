@@ -1,5 +1,6 @@
 #include <LiquidCrystal.h>
 
+int a,b = 0;
 // Kutyarisztópróba Buzzerrel
 const int buzzer=7; // ledpin and soundpin are not changed throughout the process 
 const int soundpin=A2;
@@ -28,7 +29,7 @@ pinMode(ledPin, OUTPUT);
 // set up the LCD's number of columns and rows:
 lcd.begin(16, 2);
 // Print a message to the LCD.
-lcd.print("Ugatás, Ajtóhozmenés!");
+lcd.print("Ugatás!!!Ajtóhozmenés!");
 }
 
 void loop() {
@@ -64,7 +65,10 @@ for (int j = 0; j <= 10000; j++) {
 // (note: line 1 is the second row, since counting begins with 0):
 lcd.setCursor(0, 1);
 // print the number of seconds since reset:
-lcd.print(millis() / 1000);
+if(distance <= sonarMin || soundsens>=threshold )
+a++;
+b++;
+{lcd.print(a,b);}
 }
 
 ///////////////////////////////////////////////
