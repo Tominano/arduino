@@ -2,9 +2,11 @@
 #include <LiquidCrystal.h>
 
 long duration;
+const int buttonPin = 7;
+int buttonState;
 int distance; 
 int n = 0;
-int m =0;
+int m = 0;
 const int buzzer = A2;
 const int soundpin=A5;
 const int threshold=200;
@@ -17,11 +19,16 @@ const int sonarMin=30;
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
+int Reset(int n = 0, int m = 0){
+  return n; m;
+       }
+
 void setup() {
+  pinMode(buttonPin, INPUT);
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
   // Print a message to the LCD.
-  lcd.print("Ugat, Megy!");
+  lcd.print("!!Ugat!!!Megy!!");
 
   pinMode(buzzer,OUTPUT); 
   pinMode(soundpin,INPUT);
@@ -34,7 +41,7 @@ void setup() {
 
 void loop() {
 
-digitalWrite(trigPin, HIGH);
+  digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
   // Reads the echoPin, returns the sound wave travel time in microseconds
@@ -44,10 +51,12 @@ digitalWrite(trigPin, HIGH);
   // Prints the distance on the Serial Monitor
   Serial.print("Distance: ");
   Serial.println(distance);
+
+
   
   int soundsens=analogRead(soundpin); // reads analog data from sound sensor
   if (soundsens>=threshold) { // Against the dogbarking
-      for (int i = 100; i <= 10000; i++) {
+      for (int i = 1000; i <= 10000; i++) {
         tone(buzzer, i);
         delay(1);
       } 
@@ -62,7 +71,7 @@ digitalWrite(trigPin, HIGH);
 /////////////////////////////////////////////////////
 
   if(distance <= sonarMin){
-  for (int j = 100; j <= 10000; j++) {
+  for (int j = 1000; j <= 10000; j++) {
           tone(buzzer, j);
           delay(1);
         } 
@@ -75,13 +84,22 @@ digitalWrite(trigPin, HIGH);
       digitalWrite(buzzer,LOW);
     }
 
-     
+  buttonState = digitalRead(buttonPin);
+  if (buttonState == HIGH){
+    Reset();}
+  
+
   // set the cursor to column 0, line 1
   // (note: line 1 is the second row, since counting begins with 0):
-  lcd.setCursor(0, 1);
-  // print the number of seconds since reset:
-  lcd.print(n);
-  lcd.setCursor(6,1);
-  lcd.print(m);
+  if(n >= 20){
+    lcd.setCursor(0,1);
+    lcd.print("MuchBark");
+    lcd.setCursor(9,1);
+    lcd.print(m);}
+    else{
+      lcd.setCursor(9,1);
+      lcd.print(m);
+      lcd.setCursor(0,1);
+      lcd.print(n);}
 
 }
