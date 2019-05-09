@@ -1,0 +1,1 @@
+avr-g++  -mmcu=atmega168 -DF_CPU=16000000 -I/libarduinocore -Os   CMakeFiles/project1.dir/project.cpp.o  -o project1  -L/libarduinocore -Wl,-rpath,/libarduinocore -larduinocore 
