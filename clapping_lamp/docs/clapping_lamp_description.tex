@@ -12,8 +12,12 @@ lmargin = 25mm, rmargin = 25 mm, bmargin = 18 mm}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{enumitem}
+
+\usepackage{listings}
+\lstset{language=C}
+
 \author{Nagy Kapolcs Ompoly}
-\title{Fényelhajlási jelenségek vizsgálata \\ \textsl{\small{Klasszikus fizika laboratórium, Hétfő}}}
+\title{Arduino Clap Sensitive Light Control}
 \date{ }
 \linespread{1.42}
 \begin{document}
@@ -46,7 +50,7 @@ lmargin = 25mm, rmargin = 25 mm, bmargin = 18 mm}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 \section{Projektmunka célja}
-A projekt célja, hogy mikrokontroller segítségével egy LED szalagot írányítsunk hangérzékelővel.
+A projekt célja, hogy mikrokontroller segítségével egy LED szalagot írányítsunk hangérzékelővel, mivel így 1 vagy 2 kézen kívül nincs szükség a több végtagra, hogy tudjuk kontrollálni a környezet fényforrásának az állapotát.
 
 \section{Eszközök}
 
@@ -59,74 +63,24 @@ A projekt célja, hogy mikrokontroller segítségével egy LED szalagot írány�
 	\item SS8050 NPN Transistor
 \end{itemize}
 
-\section{Mérésleírás}
+\section{Projektmunka}
 
-\subsection{Fraunhofer-diffrakció}
-
-\subsubsection{Egy rés}
+\subsection{Leírása}
 
 \indent Keskeny résen áthaladó és a rés síkjára merőleges fénynyaláb egy része eltérül az eredeti iránytól, fényelhajlás lép fel. Az intenzitás $I(\alpha)$ eloszlását a szög függvényében az
 
-\begin{equation}
-I=I_0\cdot \frac{sin^2\epsilon}{\epsilon^2},~ahol~ \epsilon=\frac{a}{\lambda} \pi sin \alpha
-\end{equation}
-egyenlet adja, ahol $\alpha$ az eltérülés szöge, $I_0$ az $\alpha = 0$ szögnél mérhető főmaximum intenzitása, $a$ a rés szélessége, $\lambda=(632.8\pm0.1)~nm$ a fény hullámhossza. Az intenzitás minimumhelyei:
 
-\begin{equation}
-sin \alpha_n=n\frac{\lambda}{a},~ahol~n=\pm1,\pm2, \cdots
-\end{equation}
-Az $\alpha_n$ szög az $n.$ minimumhely eltérüléshez tartozó szög. Ha a fényt a rés méretéhez képest messze, egy távoli ernyőn fogjuk fel, akkor az alábbi közelítés érvényes:
+\subsection{Felhasznált kód}
 
-\begin{equation}
-sin \alpha \approx tg \alpha=\frac{x}{L},
-\end{equation}
+\begin{lstlisting}
+#include <stdio.h>
 
-ahol $x$ a főmaximum középpontjától mért távolsága a minimumhelyeknek, $L$ az ernyő és a rés közötti távolság. 
-
-A mérés során az intenzitás helyfüggését vizsgáljuk. A számítógép által vezérelt detektor segítségével grafikont kapunk, amelyen a kiértékelő programmal  meghatározhatjuk a minimumhelyeket. Az $a$ résszélességet meghatározhatjuk, ha ábrázoljuk $x_n$ minimumok helyeit $n$ függvényében. Az adatokra egyenest illesztve, annak meredekségéből meghatározhatjuk $a$-t.
-
-\begin{equation}
-a=\frac{\lambda L}{m} ,
-\end{equation}
-
-ahol $m$ az illesztett egyenes meredeksége.
-
-\subsubsection{Kéttős rés}
-\indent Kettős rés esetében a feladat hasonló mint az egy résnél. A mérésnél két $a$ szélességű rés helyezkedik el egymástól $d$ távolságra. A fény hullámtermészetéből adódóan a réseken átjutó fénynyalábok interferálnak. Az elméletben várt intenzitáseloszlás az alábbi módon módosul:
-
-\begin{equation}
-I=I_0 \cdot \frac{sin^2(\pi\frac{a}{\lambda}sin\alpha)}{(\pi\frac{a}{\lambda}sin\alpha)^2} cos^2(\pi \frac{d}{\lambda}sin\alpha)
-\end{equation}
-
-A kapott grafikonon két függvény konvolúciója látható. A szorzat első tényezőjének minimumhelyei adják az elsőrendű minimumhelyeket, melyekre egyenest illesztve megkaphatjuk $a$ rácsszélességet. 
-
-A másodosztályú minimumok helyéből pedig a $d$ rácstávolság fejezhető ki:
-
-\begin{equation}
-x_k=k^{*}\cdot\frac{\lambda L}{d},~ahol~k^{*}=\pm\frac{1}{2},\pm\frac{3}{2},\cdots
-\end{equation}
-
-Hasonlóan, lineáris függvényt illesztve a $d$ réstávolság meghatározható:
-
-\begin{equation}
-d=\frac{\lambda L}{m}
-\end{equation}
-
-Ahol $m$ az illesztett egyenes meredeksége.
-
-\subsubsection{Hajszál}
-Pont fordítva engedi át a fényt mint a rés, de az elméleti leírása megegyezik az \textit{egy rés} alatt írtakkal, hiszen a Babinet-elv szerint egy alakzat komplementere által elhajlított fény intenzitáseloszlása a távoli ernyőn ugyanolyan függvénnyel írható le, mint az alakzaté, az elhajlási kép viszont különbözik. Tehát az ernyőn megjelenő kép a rés és a vékony szál esetében azonos, kivéve a rés és a szál mögötti területeket. A szálon létrejövő elhajlás tehát ugyanúgy kezelhető, mint a rés esetében. A minimumhelyekre illesztett egyenes meredekségéből a szál vastagsága meghatározható.
-
-
-\subsection{Fresnel-diffrakció}
-
-Ebben a mérési elrendezésben nem párhuzamosított sugárnyalábbal dolgozunk. A Fresnel-diffrakciót vizsgáljuk, mégpedig úgy, hogy egy pengét helyezünk a fény útjába. Ezt nem tudjuk analitikusan megoldani, mivel a pontszerű fényforrás keltette fényt gömbhullámokkal kell leírni, és a féltér egészéből eredő járulékokat folytonosan összegezni. A féltér intenzitáseloszlását a következő képlet adja meg:
-
-\begin{equation}
-x=\nu \sqrt{\frac{\lambda b (a+b)}{2a}} ,
-\end{equation}
-
-ahol $x$ az elhajlás, $b$ a penge és az ernyő, $a$ pedig a penge és a lézer közötti távolság. 
+int main(int argc, char ** argv)
+{
+  printf("Hello world!\n");
+  return 0;
+}
+\end{lstlisting} 
 
 \section{Mérési adatok és kiértékelés}
 
