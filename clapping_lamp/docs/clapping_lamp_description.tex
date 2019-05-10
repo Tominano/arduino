@@ -1,0 +1,228 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[magyar]{babel}
+\usepackage{geometry}
+\geometry{a4paper, tmargin = 18mm,
+lmargin = 25mm, rmargin = 25 mm, bmargin = 18 mm}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\author{Nagy Kapolcs Ompoly}
+\title{Fényelhajlási jelenségek vizsgálata \\ \textsl{\small{Klasszikus fizika laboratórium, Hétfő}}}
+\date{ }
+\linespread{1.42}
+\begin{document}
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.15\textwidth]{eltecimer.jpg}\par
+	\vspace{1cm}
+	{\Large\itshape 10. mérés \par}
+	{\huge\bfseries Fényelhajlási jelenségek vizsgálata\par}
+	
+	\vfill
+	
+	\raggedleft
+	Mérés: 2017.11.13.\par
+	Beadás: 2017.11.20.\par
+	\vspace{0.5cm}
+	Nagy Kapolcs Ompoly\par
+	(W7R17G)\par
+	2. évfolyam\par
+	Hétfői csoport\par
+	
+	\vspace{0.5cm}
+
+	\centering
+	{\small\itshape Mérési Jegyzőkönyv \par}
+\end{titlepage}
+\clearpage
+\setcounter{page}{1}
+\newpage
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\section{Mérés célja}
+A mérés célja, hogy lézer segítségével Fresnel- és Fraunhofer elhajlási képét megvizsgáljuk egyrésen, kettős résen, egy hajszálon és végül pedig egy penge élén. A kiértékelést egy számítógéppel vezérelt léptetőmotoros intenzitás leolvasó és számítógépes program segítségével végeztük.
+
+\section{Mérőeszközök}
+
+\begin{itemize}
+	\item Számítógép, detektor, kiértékelő programok
+	\item Egyrés, kettős rés, hajszál, penge
+	\item Mérőszalag
+	\item Lézer 
+\end{itemize}
+
+\section{Mérésleírás}
+
+\subsection{Fraunhofer-diffrakció}
+
+\subsubsection{Egy rés}
+
+\indent Keskeny résen áthaladó és a rés síkjára merőleges fénynyaláb egy része eltérül az eredeti iránytól, fényelhajlás lép fel. Az intenzitás $I(\alpha)$ eloszlását a szög függvényében az
+
+\begin{equation}
+I=I_0\cdot \frac{sin^2\epsilon}{\epsilon^2},~ahol~ \epsilon=\frac{a}{\lambda} \pi sin \alpha
+\end{equation}
+egyenlet adja, ahol $\alpha$ az eltérülés szöge, $I_0$ az $\alpha = 0$ szögnél mérhető főmaximum intenzitása, $a$ a rés szélessége, $\lambda=(632.8\pm0.1)~nm$ a fény hullámhossza. Az intenzitás minimumhelyei:
+
+\begin{equation}
+sin \alpha_n=n\frac{\lambda}{a},~ahol~n=\pm1,\pm2, \cdots
+\end{equation}
+Az $\alpha_n$ szög az $n.$ minimumhely eltérüléshez tartozó szög. Ha a fényt a rés méretéhez képest messze, egy távoli ernyőn fogjuk fel, akkor az alábbi közelítés érvényes:
+
+\begin{equation}
+sin \alpha \approx tg \alpha=\frac{x}{L},
+\end{equation}
+
+ahol $x$ a főmaximum középpontjától mért távolsága a minimumhelyeknek, $L$ az ernyő és a rés közötti távolság. 
+
+A mérés során az intenzitás helyfüggését vizsgáljuk. A számítógép által vezérelt detektor segítségével grafikont kapunk, amelyen a kiértékelő programmal  meghatározhatjuk a minimumhelyeket. Az $a$ résszélességet meghatározhatjuk, ha ábrázoljuk $x_n$ minimumok helyeit $n$ függvényében. Az adatokra egyenest illesztve, annak meredekségéből meghatározhatjuk $a$-t.
+
+\begin{equation}
+a=\frac{\lambda L}{m} ,
+\end{equation}
+
+ahol $m$ az illesztett egyenes meredeksége.
+
+\subsubsection{Kéttős rés}
+\indent Kettős rés esetében a feladat hasonló mint az egy résnél. A mérésnél két $a$ szélességű rés helyezkedik el egymástól $d$ távolságra. A fény hullámtermészetéből adódóan a réseken átjutó fénynyalábok interferálnak. Az elméletben várt intenzitáseloszlás az alábbi módon módosul:
+
+\begin{equation}
+I=I_0 \cdot \frac{sin^2(\pi\frac{a}{\lambda}sin\alpha)}{(\pi\frac{a}{\lambda}sin\alpha)^2} cos^2(\pi \frac{d}{\lambda}sin\alpha)
+\end{equation}
+
+A kapott grafikonon két függvény konvolúciója látható. A szorzat első tényezőjének minimumhelyei adják az elsőrendű minimumhelyeket, melyekre egyenest illesztve megkaphatjuk $a$ rácsszélességet. 
+
+A másodosztályú minimumok helyéből pedig a $d$ rácstávolság fejezhető ki:
+
+\begin{equation}
+x_k=k^{*}\cdot\frac{\lambda L}{d},~ahol~k^{*}=\pm\frac{1}{2},\pm\frac{3}{2},\cdots
+\end{equation}
+
+Hasonlóan, lineáris függvényt illesztve a $d$ réstávolság meghatározható:
+
+\begin{equation}
+d=\frac{\lambda L}{m}
+\end{equation}
+
+Ahol $m$ az illesztett egyenes meredeksége.
+
+\subsubsection{Hajszál}
+Pont fordítva engedi át a fényt mint a rés, de az elméleti leírása megegyezik az \textit{egy rés} alatt írtakkal, hiszen a Babinet-elv szerint egy alakzat komplementere által elhajlított fény intenzitáseloszlása a távoli ernyőn ugyanolyan függvénnyel írható le, mint az alakzaté, az elhajlási kép viszont különbözik. Tehát az ernyőn megjelenő kép a rés és a vékony szál esetében azonos, kivéve a rés és a szál mögötti területeket. A szálon létrejövő elhajlás tehát ugyanúgy kezelhető, mint a rés esetében. A minimumhelyekre illesztett egyenes meredekségéből a szál vastagsága meghatározható.
+
+
+\subsection{Fresnel-diffrakció}
+
+Ebben a mérési elrendezésben nem párhuzamosított sugárnyalábbal dolgozunk. A Fresnel-diffrakciót vizsgáljuk, mégpedig úgy, hogy egy pengét helyezünk a fény útjába. Ezt nem tudjuk analitikusan megoldani, mivel a pontszerű fényforrás keltette fényt gömbhullámokkal kell leírni, és a féltér egészéből eredő járulékokat folytonosan összegezni. A féltér intenzitáseloszlását a következő képlet adja meg:
+
+\begin{equation}
+x=\nu \sqrt{\frac{\lambda b (a+b)}{2a}} ,
+\end{equation}
+
+ahol $x$ az elhajlás, $b$ a penge és az ernyő, $a$ pedig a penge és a lézer közötti távolság. 
+
+\section{Mérési adatok és kiértékelés}
+
+\subsection{Egy rés}
+
+A méréshez tartozó grafikont csatolok a jegyzőkönyvhöz. Ezt a mérés további részeiben készített grafikonokat a mérőhelyen elhelyezett számítógép és kiértékelő program segítségével készítettük. \\
+Az egyrésnél mért minimumok helyei.
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+\multicolumn{4}{|c|}{Rés elhajlási képének kioltási helyei} \\ \hline
+k & $x_k$ & k & $x_k$ \\ \hline
+-5 & 58.012 & 1 & 117.9347 \\ \hline
+-4 & 67.8843 & 2 & 127.807 \\ \hline
+-3 & 77.9862 & 3 & 137.2202 \\ \hline
+-2 & 87.3994 & 4 & 147.0925 \\ \hline
+-1 & 97.2717 & 5 & 156.9649 \\ \hline
+\end{tabular}
+\end{center}
+Az adathalmazra egyenest illesztettem.
+\begin{center}
+\includegraphics[width=0.66\textwidth]{1MINIMUM.png}
+\end{center}
+
+Az illesztett egyenes meredeksége:
+\begin{center}
+$m=(9.91\pm0.03)~mm$
+\end{center}
+
+A meredekség és a mért $L=(2067\pm1)~mm$ ernyőtávolság segítségével a rés szélessége:
+\begin{center}
+$a=\frac{\lambda L}{m}=(0.1319\pm0.0002)~mm$
+\\
+$\Delta a=a(\frac{\Delta \lambda}{\lambda}+\frac{\Delta L}{L}+\frac{\Delta m}{m})$
+\end{center}
+
+\subsection{Kéttős rés}
+
+A csatolt grafikon a kettős rés elhajlási képének másodrendű minimumhelyeit ábrázolja a sorszámuk függvényében.
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+k & min & k & min \\ \hline
+-3 & 73.5362 & 1 & 119.3754 \\ \hline
+-2 & 85.0663 & 2 & 130.6243 \\ \hline
+-1 & 96.4558 & 3 & 142.0138 \\ \hline
+\end{tabular}
+\end{center}
+Az adathalmazra egyenest illesztettem.
+\begin{center}
+\includegraphics[width=0.66\textwidth]{2MINIMUM.png}
+\end{center}
+Az illesztett egyenes meredeksége:
+\begin{center}
+$m=(11.41\pm0.02)~mm$
+\end{center}
+A meredekség és a mért $L=(2067\pm1)~mm$ ernyőtávolság segítségével a két rés távolsága:
+\begin{center}
+$d=\frac{\lambda L}{m}=(0.1392\pm0.0003)~mm$
+\\
+$\Delta d=d(\frac{\Delta \lambda}{\lambda}+\frac{\Delta L}{L}+\frac{\Delta m}{m})$
+\end{center}
+
+\subsection{Hajszál}
+A csatolt grafikon a hajszál elhajlási képének minimumhelyeit ábrázolja a sorszámuk függvényében.
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+k & min & k & min \\ \hline
+-3 & 58.2044 & 1 & 125.244 \\ \hline
+-2 & 75.1801 & 2 & 142.048 \\ \hline
+-1 & 91.4611 & 3 & 159.032 \\ \hline
+\end{tabular}
+\end{center}
+Az adathalmazra egyenest illesztettem.
+\begin{center}
+\includegraphics[width=0.66\textwidth]{3MINIMUM.png}
+\end{center}
+Az illesztett egyenes meredeksége:
+\begin{center}
+$m=(16.78\pm0.04)~mm$
+\end{center}
+A meredekség és a mért $L=(2067\pm1)~mm$ ernyőtávolság segítségével a hajszál szélessége:
+\begin{center}
+$a=\frac{\lambda L}{m}=(0.1080\pm0.0003)~mm$
+\\
+$\Delta a=a(\frac{\Delta \lambda}{\lambda}+\frac{\Delta L}{L}+\frac{\Delta m}{m})$
+\end{center}
+
+\subsection{Penge}
+Itt analitikusan nem tudunk számolni, de a mérés során adatsorra illesztett elméleti görbét kinyomtatva csatolom a jegyzőkönyvhöz. \\
+A mérés megkezdése előtt egy nyalábtágítót helyeztünk el a lézer és a penge közé, ezzel biztosítottuk a kellően nagy teret. 
+\begin{center}
+\includegraphics[width=0.66\textwidth]{freshnel.png}
+\end{center}
+\begin{center}
+$a=633~mm$ és $b=2067.75~mm$
+\end{center}
+A féltér határát a penge éle határozza meg. Az elméleti és az illesztett görbe nem fedi teljesen egymást. Ennek oka az, hogy a penge éle nem tekinthető végtelen vékonynak, valamint a tér sem korlátlan.
+
+\section{Diszkusszió}
+A mérést sikeresnek tekinthetjük,az illesztések pontosak és a mérési eredmények hűen tükrözik a valóságot.
+\end{document}
