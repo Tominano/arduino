@@ -59,26 +59,66 @@ A projekt célja, hogy mikrokontroller segítségével egy LED szalagot írány�
 	\item USB cable
 	\item Jump Wires
 	\item Sound Sensor Module 
-	\item LED strip
 	\item SS8050 NPN Transistor
+	\item LED strip
+	\item 12v AC/DC LED Driver
 \end{itemize}
 
 \section{Projektmunka}
 
 \subsection{Leírása}
 
-\indent Keskeny résen áthaladó és a rés síkjára merőleges fénynyaláb egy része eltérül az eredeti iránytól, fényelhajlás lép fel. Az intenzitás $I(\alpha)$ eloszlását a szög függvényében az
+
 
 
 \subsection{Felhasznált kód}
 
 \begin{lstlisting}
-#include <stdio.h>
+int ledPin=9;
+int sensorPin=7;
 
-int main(int argc, char ** argv)
-{
-  printf("Hello world!\n");
-  return 0;
+boolean val = 0; // sensor HIGH or LOW
+boolean status_lights = false;
+
+// for counting and calibrating clap
+int clap = 0;
+long detection_range_start = 0;
+long detection_range = 0;
+
+void setup(){
+  pinMode(ledPin, OUTPUT);
+  pinMode(sensorPin, INPUT);
+  //Serial.begin(9600);
+}
+  
+void loop (){
+  int status_sensor = digitalRead(sensorPin);
+  
+  if (status_sensor == 1){
+    if (clap == 0){
+      detection_range_start = detection_range = millis();
+      clap++; 
+    } else if (clap > 0 && millis()-detection_range >= 100){
+      detection_range = millis();
+      clap++;
+      //Serial.print("counting clap: ");
+      //Serial.println(clap);
+    }
+  }
+  
+  if (millis()-detection_range_start >= 600){
+    if (clap == 2){ 
+      if (!status_lights){
+        digitalWrite(ledPin, HIGH);
+        status_lights = true;
+        clap = 0;
+      } else if (status_lights){
+        status_lights = false;
+        digitalWrite(ledPin, LOW);
+      }
+    }
+    clap = 0;
+  }
 }
 \end{lstlisting} 
 
@@ -101,7 +141,7 @@ k & $x_k$ & k & $x_k$ \\ \hline
 \end{center}
 Az adathalmazra egyenest illesztettem.
 \begin{center}
-\includegraphics[width=0.66\textwidth]{1MINIMUM.png}
+#\includegraphics[width=0.66\textwidth]{1MINIMUM.png}
 \end{center}
 
 Az illesztett egyenes meredeksége:
