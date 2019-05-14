@@ -70,7 +70,7 @@ A projekt célja, hogy mikrokontroller segítségével egy LED szalagot írány�
 
 \subsection{Megvalósítás}
 
-A jelenlegi projektben azt szerettem volna elérni, hogy két egymásutáni tapsra fel illetve le tudjam kapcsolni a LED szalagot. Ehhez egy arduinos hang detektort használtam, aminek a digitális kimenetelét olvasom, ami a hang intenzitást figyeli és egy küszöbértékhez képest, vagy HIGH, vagy LOW értéket ad. Ezt int-é alakítva figyelem én is és abban az esetben, ha ez 1-el egyenlő, akkor elkezdem számolni, hány taps volt egymás után. Ezt 600 miliszekundumonként megnézem, hogy volt-e 2 taps és ha volt, akkor a led-et fel, vagy lekapcsolom az adott állapotához képest. 
+A jelenlegi projektben azt szerettem volna elérni, hogy két egymásutáni tapsra fel illetve le tudjam kapcsolni a LED szalagot. Ehhez egy arduinos hang detektort használtam, aminek a digitális kimenetelét olvasom, ami a hang intenzitást figyeli és egy küszöbértékhez képest, vagy HIGH, vagy LOW értéket ad. Ezt int-é alakítva figyelem én is és abban az esetben, ha ez 1-el egyenlő, akkor elkezdem számolni, hány taps volt egymás után. Ez után 600 miliszekundumonként megnézem, hogy volt-e 2 taps és ha volt, akkor a led-et fel, vagy lekapcsolom az adott állapotához képest. 
 
 A kód részéről ennyit, a áramkör megvalósításánál az volt az izgalmas számomra, hogy a LED szalagnak nem volt elég az 5V így külső áramforrással kellett megoldanom úgy, hogy egy tranzisztort kapcsolgatok illetve a hálozati áramot kellett 12V-á alakítani.
 
