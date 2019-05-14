@@ -68,6 +68,15 @@ A projekt célja, hogy mikrokontroller segítségével egy LED szalagot írány�
 
 \subsection{Megvalósítás}
 
+A jelenlegi projektben azt szerettem volna elérni, hogy két egymásutáni tapsra fel illetve le tudjam kapcsolni a LED szalagot. Ehhez egy arduinos hang detektort használtam, aminek a digitális kimenetelét olvasom, ami a hang intenzitást figyeli és egy küszöbértékhez képest, vagy HIGH, vagy LOW értéket ad. Ezt int-é alakítva figyelem én is és abban az esetben, ha ez 1-el egyenlő, akkor elkezdem számolni, hány taps volt egymás után. Ezt 600 miliszekundumonként megnézem, hogy volt-e 2 taps és ha volt, akkor a led-et fel, vagy lekapcsolom az adott állapotához képest. 
+
+A kód részéről ennyit, a áramkör megvalósításánál az volt az izgalmas számomra, hogy a LED szalagnak nem volt elég az 5V így külső áramforrással kellett megoldanom úgy, hogy egy tranzisztort kapcsolgatok illetve a hálozati áramot kellett 12V-á alakítani.
+
+Készítettem egy kapcsolási rajzot is:
+
+\begin{center}
+\includegraphics[width=0.66\textwidth]{Clapping_lamp_fritzing_bb.jpg}
+\end{center}
 
 
 
@@ -122,102 +131,7 @@ void loop (){
 }
 \end{lstlisting} 
 
-\section{Mérési adatok és kiértékelés}
+\section{Tapasztalat}
 
-\subsection{Egy rés}
-
-A méréshez tartozó grafikont csatolok a jegyzőkönyvhöz. Ezt a mérés további részeiben készített grafikonokat a mérőhelyen elhelyezett számítógép és kiértékelő program segítségével készítettük. \\
-Az egyrésnél mért minimumok helyei.
-\begin{center}
-\begin{tabular}{|c|c|c|c|} \hline
-\multicolumn{4}{|c|}{Rés elhajlási képének kioltási helyei} \\ \hline
-k & $x_k$ & k & $x_k$ \\ \hline
--5 & 58.012 & 1 & 117.9347 \\ \hline
--4 & 67.8843 & 2 & 127.807 \\ \hline
--3 & 77.9862 & 3 & 137.2202 \\ \hline
--2 & 87.3994 & 4 & 147.0925 \\ \hline
--1 & 97.2717 & 5 & 156.9649 \\ \hline
-\end{tabular}
-\end{center}
-Az adathalmazra egyenest illesztettem.
-\begin{center}
-#\includegraphics[width=0.66\textwidth]{1MINIMUM.png}
-\end{center}
-
-Az illesztett egyenes meredeksége:
-\begin{center}
-$m=(9.91\pm0.03)~mm$
-\end{center}
-
-A meredekség és a mért $L=(2067\pm1)~mm$ ernyőtávolság segítségével a rés szélessége:
-\begin{center}
-$a=\frac{\lambda L}{m}=(0.1319\pm0.0002)~mm$
-\\
-$\Delta a=a(\frac{\Delta \lambda}{\lambda}+\frac{\Delta L}{L}+\frac{\Delta m}{m})$
-\end{center}
-
-\subsection{Kéttős rés}
-
-A csatolt grafikon a kettős rés elhajlási képének másodrendű minimumhelyeit ábrázolja a sorszámuk függvényében.
-\begin{center}
-\begin{tabular}{|c|c|c|c|} \hline
-k & min & k & min \\ \hline
--3 & 73.5362 & 1 & 119.3754 \\ \hline
--2 & 85.0663 & 2 & 130.6243 \\ \hline
--1 & 96.4558 & 3 & 142.0138 \\ \hline
-\end{tabular}
-\end{center}
-Az adathalmazra egyenest illesztettem.
-\begin{center}
-\includegraphics[width=0.66\textwidth]{2MINIMUM.png}
-\end{center}
-Az illesztett egyenes meredeksége:
-\begin{center}
-$m=(11.41\pm0.02)~mm$
-\end{center}
-A meredekség és a mért $L=(2067\pm1)~mm$ ernyőtávolság segítségével a két rés távolsága:
-\begin{center}
-$d=\frac{\lambda L}{m}=(0.1392\pm0.0003)~mm$
-\\
-$\Delta d=d(\frac{\Delta \lambda}{\lambda}+\frac{\Delta L}{L}+\frac{\Delta m}{m})$
-\end{center}
-
-\subsection{Hajszál}
-A csatolt grafikon a hajszál elhajlási képének minimumhelyeit ábrázolja a sorszámuk függvényében.
-\begin{center}
-\begin{tabular}{|c|c|c|c|} \hline
-k & min & k & min \\ \hline
--3 & 58.2044 & 1 & 125.244 \\ \hline
--2 & 75.1801 & 2 & 142.048 \\ \hline
--1 & 91.4611 & 3 & 159.032 \\ \hline
-\end{tabular}
-\end{center}
-Az adathalmazra egyenest illesztettem.
-\begin{center}
-\includegraphics[width=0.66\textwidth]{3MINIMUM.png}
-\end{center}
-Az illesztett egyenes meredeksége:
-\begin{center}
-$m=(16.78\pm0.04)~mm$
-\end{center}
-A meredekség és a mért $L=(2067\pm1)~mm$ ernyőtávolság segítségével a hajszál szélessége:
-\begin{center}
-$a=\frac{\lambda L}{m}=(0.1080\pm0.0003)~mm$
-\\
-$\Delta a=a(\frac{\Delta \lambda}{\lambda}+\frac{\Delta L}{L}+\frac{\Delta m}{m})$
-\end{center}
-
-\subsection{Penge}
-Itt analitikusan nem tudunk számolni, de a mérés során adatsorra illesztett elméleti görbét kinyomtatva csatolom a jegyzőkönyvhöz. \\
-A mérés megkezdése előtt egy nyalábtágítót helyeztünk el a lézer és a penge közé, ezzel biztosítottuk a kellően nagy teret. 
-\begin{center}
-\includegraphics[width=0.66\textwidth]{freshnel.png}
-\end{center}
-\begin{center}
-$a=633~mm$ és $b=2067.75~mm$
-\end{center}
-A féltér határát a penge éle határozza meg. Az elméleti és az illesztett görbe nem fedi teljesen egymást. Ennek oka az, hogy a penge éle nem tekinthető végtelen vékonynak, valamint a tér sem korlátlan.
-
-\section{Diszkusszió}
-A mérést sikeresnek tekinthetjük,az illesztések pontosak és a mérési eredmények hűen tükrözik a valóságot.
+Elég szórakoztató, de később ezt tovább szeretném fejleszteni, mert a valós életben sokszor előfordulhat olyan környezeti zaj, amire a hangdetektor érzékeny, szóval esetleg egy nem annyira jellegzetes 2 rövid 1 hosszan szünet a tapsok között, így lehet célnak megfelelőbben működne.
 \end{document}

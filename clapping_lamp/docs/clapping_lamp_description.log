@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.15)  14 MAY 2019 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.15)  14 MAY 2019 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,113 +703,35 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+<Clapping_lamp_fritzing_bb.jpg, id=11, 469.755pt x 368.577pt>
+File: Clapping_lamp_fritzing_bb.jpg Graphic file (type jpg)
+<use Clapping_lamp_fritzing_bb.jpg>
+Package pdftex.def Info: Clapping_lamp_fritzing_bb.jpg  used on input line 78.
+(pdftex.def)             Requested size: 300.46277pt x 235.74786pt.
  [1
 
-] [2]
-! You can't use `macro parameter character #' in vertical mode.
-l.144 #
-       \includegraphics[width=0.66\textwidth]{1MINIMUM.png}
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-LaTeX Warning: File `1MINIMUM.png' not found on input line 144.
-
-
-! Package pdftex.def Error: File `1MINIMUM.png' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.144 ...phics[width=0.66\textwidth]{1MINIMUM.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 144.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [3]
-
-LaTeX Warning: File `2MINIMUM.png' not found on input line 172.
-
-
-! Package pdftex.def Error: File `2MINIMUM.png' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.172 ...phics[width=0.66\textwidth]{2MINIMUM.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `3MINIMUM.png' not found on input line 197.
-
-
-! Package pdftex.def Error: File `3MINIMUM.png' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.197 ...phics[width=0.66\textwidth]{3MINIMUM.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4]
-
-LaTeX Warning: File `freshnel.png' not found on input line 214.
-
-
-! Package pdftex.def Error: File `freshnel.png' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214 ...phics[width=0.66\textwidth]{freshnel.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[5] [6] (./clapping_lamp_description.aux) ) 
+] [2 <./Clapping_lamp_fritzing_bb.jpg>] [3] (./clapping_lamp_description.aux) )
+ 
 Here is how much of TeX's memory you used:
- 7253 strings out of 492982
- 104243 string characters out of 6134895
- 212122 words of memory out of 5000000
- 10695 multiletter control sequences out of 15000+600000
- 16377 words of font info for 39 fonts, out of 8000000 for 9000
+ 7230 strings out of 492982
+ 103717 string characters out of 6134895
+ 207122 words of memory out of 5000000
+ 10680 multiletter control sequences out of 15000+600000
+ 16063 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,49p,292b,1606s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm
--super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
-440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti10
-95.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on clapping_lamp_description.pdf (7 pages, 1348874 bytes).
+ 41i,5n,49p,640b,1606s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+fti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfti1440.pfb>
+Output written on clapping_lamp_description.pdf (4 pages, 2170876 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
