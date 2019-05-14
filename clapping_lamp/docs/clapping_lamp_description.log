@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.15)  14 MAY 2019 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.15)  14 MAY 2019 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,34 +712,44 @@ File: Clapping_lamp_fritzing_bb.jpg Graphic file (type jpg)
 Package pdftex.def Info: Clapping_lamp_fritzing_bb.jpg  used on input line 80.
 (pdftex.def)             Requested size: 300.46277pt x 235.74786pt.
  [2 <./Clapping_lamp_fritzing_bb.jpg>] [3]
-<clapping_lamp.jpg, id=26, 4047.12pt x 3035.34pt>
-File: clapping_lamp.jpg Graphic file (type jpg)
-<use clapping_lamp.jpg>
-Package pdftex.def Info: clapping_lamp.jpg  used on input line 141.
-(pdftex.def)             Requested size: 300.46277pt x 225.3249pt.
- [4 <./clapping_lamp.jpg>]
-(./clapping_lamp_description.aux) ) 
+<clapping_lamp_on.jpeg, id=26, 4047.12pt x 3035.34pt>
+File: clapping_lamp_on.jpeg Graphic file (type jpg)
+<use clapping_lamp_on.jpeg>
+Package pdftex.def Info: clapping_lamp_on.jpeg  used on input line 141.
+(pdftex.def)             Requested size: 163.88815pt x 122.87502pt.
+<clapping_lamp_off.jpg, id=27, 4047.12pt x 3035.34pt>
+File: clapping_lamp_off.jpg Graphic file (type jpg)
+<use clapping_lamp_off.jpg>
+Package pdftex.def Info: clapping_lamp_off.jpg  used on input line 142.
+(pdftex.def)             Requested size: 163.88815pt x 122.87502pt.
+<clapping_lamp_full.jpeg, id=28, 4047.12pt x 3035.34pt>
+File: clapping_lamp_full.jpeg Graphic file (type jpg)
+<use clapping_lamp_full.jpeg>
+Package pdftex.def Info: clapping_lamp_full.jpeg  used on input line 143.
+(pdftex.def)             Requested size: 327.7763pt x 245.79636pt.
+ [4 <./clapping_lamp_on.jpeg> <./clapping_lamp_off.jpg> <./clapping_lamp_full.j
+peg>] (./clapping_lamp_description.aux) ) 
 Here is how much of TeX's memory you used:
- 7235 strings out of 492982
- 103821 string characters out of 6134895
+ 7246 strings out of 492982
+ 104102 string characters out of 6134895
  214122 words of memory out of 5000000
- 10684 multiletter control sequences out of 15000+600000
+ 10692 multiletter control sequences out of 15000+600000
  16063 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,5n,49p,645b,1606s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/c
-m-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2
-074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti14
-40.pfb>
-Output written on clapping_lamp_description.pdf (5 pages, 4663418 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-s
+uper/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfti1440.pfb>
+Output written on clapping_lamp_description.pdf (5 pages, 7999351 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
