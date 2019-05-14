@@ -26,7 +26,7 @@ lmargin = 25mm, rmargin = 25 mm, bmargin = 18 mm}
 	\includegraphics[width=0.15\textwidth]{eltecimer.jpg}\par
 	\vspace{1cm}
 	{\Large\itshape Mikrokontrollerek és alkalmazásaik Labor\par}
-	{\huge\bfseries Arduino: Clap Sensitive Light Control\par}
+	{\huge\bfseries Arduino: \par Clap Sensitive Light Control\par}
 	
 	\vfill
 	
@@ -74,7 +74,7 @@ A jelenlegi projektben azt szerettem volna elérni, hogy két egymásutáni taps
 
 A kód részéről ennyit, a áramkör megvalósításánál az volt az izgalmas számomra, hogy a LED szalagnak nem volt elég az 5V így külső áramforrással kellett megoldanom úgy, hogy egy tranzisztort kapcsolgatok illetve a hálozati áramot kellett 12V-á alakítani.
 
-Készítettem egy kapcsolási rajzot is:
+\subsection{Kapcsolási rajz}
 
 \begin{center}
 \includegraphics[width=0.66\textwidth]{Clapping_lamp_fritzing_bb.jpg}
@@ -135,7 +135,7 @@ void loop (){
 
 \section{Tapasztalat}
 
-Elég szórakoztató, de később ezt tovább szeretném fejleszteni, mert a valós életben sokszor előfordulhat olyan környezeti zaj, amire a hangdetektor érzékeny, szóval esetleg egy nem annyira jellegzetes 2 rövid 1 hosszan szünet a tapsok között, így lehet célnak megfelelőbben működne.
+Elég szórakoztató használni, de később érdemes lesz tovább fejleszteni, mert a valós életben sokszor előfordulhat olyan környezeti zaj, amire a hangdetektor érzékeny, szóval esetleg egy nem annyira jellegzetes 2 rövid 1 hosszú szünet a tapsok között, így lehet célnak megfelelőbben működne.
 
 \begin{center}
 \includegraphics[width=0.66\textwidth]{clapping_lamp.jpg}
