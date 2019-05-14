@@ -84,11 +84,10 @@ A kód részéről ennyit, a áramkör megvalósításánál az volt az izgalmas
 
 \subsection{Felhasznált kód}
 
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 int ledPin=9;
 int sensorPin=7;
 
-boolean val = 0; // sensor HIGH or LOW
 boolean status_lights = false;
 
 // for counting and calibrating clap
@@ -99,11 +98,10 @@ long detection_range = 0;
 void setup(){
   pinMode(ledPin, OUTPUT);
   pinMode(sensorPin, INPUT);
-  //Serial.begin(9600);
 }
   
 void loop (){
-  int status_sensor = digitalRead(sensorPin);
+  int status_sensor = digitalRead(sensorPin); // sound sensor HIGH or LOW
   
   if (status_sensor == 1){
     if (clap == 0){
@@ -112,8 +110,6 @@ void loop (){
     } else if (clap > 0 && millis()-detection_range >= 100){
       detection_range = millis();
       clap++;
-      //Serial.print("counting clap: ");
-      //Serial.println(clap);
     }
   }
   
@@ -137,6 +133,8 @@ void loop (){
 
 Elég szórakoztató használni és szerintem viszonylag jól be kallibráltam az adott környezetre, de később érdemes lesz tovább fejleszteni, mert a valós életben sokszor előfordulhat olyan környezeti zaj, amire a hangdetektor érzékeny. Szóval esetleg egy nem annyira jellegzetes 2 rövid 1 hosszú szünet a tapsok között, így lehet célnak megfelelőbben működne.
 
+\vspace{0.5cm}
+	
 \begin{center}
 \includegraphics[width=0.36\textwidth]{clapping_lamp_on.jpeg}
 \includegraphics[width=0.36\textwidth]{clapping_lamp_off.jpg}

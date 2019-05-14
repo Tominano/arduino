@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.15)  14 MAY 2019 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.15)  14 MAY 2019 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,38 +715,38 @@ Package pdftex.def Info: Clapping_lamp_fritzing_bb.jpg  used on input line 80.
 <clapping_lamp_on.jpeg, id=26, 4047.12pt x 3035.34pt>
 File: clapping_lamp_on.jpeg Graphic file (type jpg)
 <use clapping_lamp_on.jpeg>
-Package pdftex.def Info: clapping_lamp_on.jpeg  used on input line 141.
+Package pdftex.def Info: clapping_lamp_on.jpeg  used on input line 139.
 (pdftex.def)             Requested size: 163.88815pt x 122.87502pt.
 <clapping_lamp_off.jpg, id=27, 4047.12pt x 3035.34pt>
 File: clapping_lamp_off.jpg Graphic file (type jpg)
 <use clapping_lamp_off.jpg>
-Package pdftex.def Info: clapping_lamp_off.jpg  used on input line 142.
+Package pdftex.def Info: clapping_lamp_off.jpg  used on input line 140.
 (pdftex.def)             Requested size: 163.88815pt x 122.87502pt.
 <clapping_lamp_full.jpeg, id=28, 4047.12pt x 3035.34pt>
 File: clapping_lamp_full.jpeg Graphic file (type jpg)
 <use clapping_lamp_full.jpeg>
-Package pdftex.def Info: clapping_lamp_full.jpeg  used on input line 143.
+Package pdftex.def Info: clapping_lamp_full.jpeg  used on input line 141.
 (pdftex.def)             Requested size: 331.87473pt x 248.89949pt.
  [4 <./clapping_lamp_on.jpeg> <./clapping_lamp_off.jpg> <./clapping_lamp_full.j
 peg>] (./clapping_lamp_description.aux) ) 
 Here is how much of TeX's memory you used:
- 7246 strings out of 492982
- 104102 string characters out of 6134895
- 214122 words of memory out of 5000000
- 10692 multiletter control sequences out of 15000+600000
- 16063 words of font info for 38 fonts, out of 8000000 for 9000
+ 7227 strings out of 492982
+ 103907 string characters out of 6134895
+ 215122 words of memory out of 5000000
+ 10681 multiletter control sequences out of 15000+600000
+ 12965 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,49p,645b,1606s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,4n,49p,645b,1147s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-s
 uper/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr
+/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/
-share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfti1440.pfb>
-Output written on clapping_lamp_description.pdf (5 pages, 7999347 bytes).
+Output written on clapping_lamp_description.pdf (5 pages, 7993122 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
