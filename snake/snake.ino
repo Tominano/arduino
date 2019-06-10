@@ -6,6 +6,8 @@
 #define CS_PIN  10  // or SS
 MD_MAX72XX mx = MD_MAX72XX(CS_PIN, MAX_DEVICES);
 
+
+//plussss
 const int potmeter = 3;
 int coord[200][2];
 int leng = 1;
