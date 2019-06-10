@@ -7,7 +7,7 @@
 MD_MAX72XX mx = MD_MAX72XX(CS_PIN, MAX_DEVICES);
 
 
-//plussss
+//plussss,plus
 const int potmeter = 3;
 int coord[200][2];
 int leng = 1;
